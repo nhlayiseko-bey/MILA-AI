@@ -1,0 +1,6 @@
+entrypoint = "app/main.py"
+run = "bash start.sh"
+
+[deployment]
+run = "bash start.sh"
+build = "bash build.sh"
