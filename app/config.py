@@ -46,6 +46,10 @@ class Settings:
     openclaw_gateway_token: str
     openclaw_agent_id: str
     openclaw_request_timeout_seconds: float
+    openai_api_key: str
+    openai_base_url: str
+    openai_model: str
+    openai_request_timeout_seconds: float
     supabase_url: str
     supabase_service_role_key: str
     supabase_anon_key: str
@@ -78,6 +82,12 @@ def get_settings() -> Settings:
         openclaw_agent_id=_read_env("OPENCLAW_AGENT_ID", "main"),
         openclaw_request_timeout_seconds=float(
             _read_env("OPENCLAW_REQUEST_TIMEOUT_SECONDS", "300"),
+        ),
+        openai_api_key=_read_env("OPENAI_API_KEY"),
+        openai_base_url=_read_env("OPENAI_BASE_URL", "https://api.openai.com/v1"),
+        openai_model=_read_env("OPENAI_MODEL", "gpt-4o-mini"),
+        openai_request_timeout_seconds=float(
+            _read_env("OPENAI_REQUEST_TIMEOUT_SECONDS", "120"),
         ),
         supabase_url=_read_env("SUPABASE_URL"),
         supabase_service_role_key=_read_env("SUPABASE_SERVICE_ROLE_KEY"),

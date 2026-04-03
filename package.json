@@ -1,0 +1,23 @@
+{
+  "name": "mila-ai",
+  "version": "1.0.0",
+  "description": "Set these in `.env`:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhlayiseko-bey/MILA-AI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nhlayiseko-bey/MILA-AI/issues"
+  },
+  "homepage": "https://github.com/nhlayiseko-bey/MILA-AI#readme",
+  "dependencies": {
+    "openclaw": "^2026.4.2"
+  }
+}

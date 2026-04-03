@@ -24,3 +24,5 @@ venv/
 Thumbs.db
 .idea/
 .vscode/
+
+.openclaw-runtime/
