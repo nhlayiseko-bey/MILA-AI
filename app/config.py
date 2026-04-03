@@ -50,6 +50,10 @@ class Settings:
     openai_base_url: str
     openai_model: str
     openai_request_timeout_seconds: float
+    kimi_api_key: str
+    kimi_base_url: str
+    kimi_model: str
+    kimi_request_timeout_seconds: float
     supabase_url: str
     supabase_service_role_key: str
     supabase_anon_key: str
@@ -88,6 +92,12 @@ def get_settings() -> Settings:
         openai_model=_read_env("OPENAI_MODEL", "gpt-4o-mini"),
         openai_request_timeout_seconds=float(
             _read_env("OPENAI_REQUEST_TIMEOUT_SECONDS", "120"),
+        ),
+        kimi_api_key=_read_env("KIMI_API_KEY"),
+        kimi_base_url=_read_env("KIMI_BASE_URL", "https://api.moonshot.ai/v1"),
+        kimi_model=_read_env("KIMI_MODEL", "kimi-k2.5"),
+        kimi_request_timeout_seconds=float(
+            _read_env("KIMI_REQUEST_TIMEOUT_SECONDS", "120"),
         ),
         supabase_url=_read_env("SUPABASE_URL"),
         supabase_service_role_key=_read_env("SUPABASE_SERVICE_ROLE_KEY"),
